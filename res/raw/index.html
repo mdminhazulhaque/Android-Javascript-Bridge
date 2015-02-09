@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webview-Activity</title>
+    <style>
+        body { margin: 20px; }
+        table { border-collapse: collapse; }
+        table, td, th { border: 1px solid black; }
+    </style>
+    <script>
+            function setData(data) {
+                document.getElementById("javascript").innerHTML = data;
+            }
+            setInterval(function(){
+                var text = JSInterface.getData();
+                document.getElementById("java").innerHTML = text;
+            }, 500);
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Javascript to Activity</td>
+            <td id="java">Loading...</td>
+        </tr>
+        <tr>
+            <td>Activity to Javascript</td>
+            <td id="javascript">No response</td>
+        </tr>
+</body>
+</html>
